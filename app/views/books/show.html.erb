@@ -1,0 +1,7 @@
+
+
+<h2>Book detail</h2>
+ <p>title: <%= @book.title %></p>
+ <p>opinion: <%= @book.opinion %></p>
+ <p>user image: <%= image_tag @book.user.get_profile_image(100,100) %></p>
+ <p>user name: <%= @book.user.name %></p>

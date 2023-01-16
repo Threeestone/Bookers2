@@ -1,0 +1,30 @@
+<div class="info">
+ <h2>User info</h2>
+  <% books.each do |book| %>
+   <p><%image_tag book.user.get_profile_image(100,100) %></p>
+</div>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <th>name</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>introduction</th>
+    </tr>
+  </tbody>
+</table>
+
+<div class="row">
+  <%= link_to "edit", edit_user_path %>
+</div>
+
+<%= form_with model: @book, method: :post do |f| %>
+ <h2>New book</h2>
+  <h4>Title</h4>
+   <%= f.text_field :title %>
+  <h4>opinion</h4>
+   <%= f.text_field :body %>
+   <%= f.submit 'Create Book' %>
+<% end %>

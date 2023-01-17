@@ -2,6 +2,7 @@
  <h2>User info</h2>
   <% books.each do |book| %>
    <p><%image_tag book.user.get_profile_image(100,100) %></p>
+   <p><%= book.name %></p>
 </div>
 
 <table class="table">
@@ -20,7 +21,7 @@
   <%= link_to "edit", edit_user_path %>
 </div>
 
-<%= form_with model: @book, method: :post do |f| %>
+<%= form_with model: book, method: :post do |f| %>
  <h2>New book</h2>
   <h4>Title</h4>
    <%= f.text_field :title %>

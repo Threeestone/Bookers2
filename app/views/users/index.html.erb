@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-   <tr><%image_tag book.user.get_profile_image(100,100) %></tr>
+   <tr><%image_tag @book.user.get_profile_image(100,100) %></tr>
    <tr>user name: <%= @book.user.name %></tr>
    <tr><%= link_to "show", book_path(book.id) %></tr>
   </tbody>

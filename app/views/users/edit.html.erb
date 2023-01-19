@@ -1,0 +1,9 @@
+<h2>User info</h2>
+
+ <%= form_with model: @book do |t| %>
+ <h4>Name</h4>
+  <%= t.text_field :name %>
+ <h4>Introduction</h4>
+  <%= t.text_area :body %>
+  <%= t.submit 'Update User' %>
+  <% end %>

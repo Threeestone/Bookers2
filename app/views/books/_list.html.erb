@@ -1,3 +1,7 @@
+<head>
+ <script src="https://kit.fontawesome.com/2f82d990d8.js" crossorigin="anonymous"></script>
+</head>
+
 <div class="info">
  <h2>User info</h2>
    <p><%image_tag user.get_profile_image(100,100) %></p>
@@ -17,7 +21,7 @@
 </div>
 
 <div class="row">
-  <%= link_to "edit", edit_user_path(user.id) %>
+   <%= link_to "edit", edit_user_path(user.id), class: "btn btn-outline-secondary btn-block edit_user_75806" %>
 </div>
 
 <%= form_with model: book, method: :post do |f| %>
@@ -33,6 +37,6 @@
    <%= f.text_field :body %>
 
   <div class="form-group">
-   <%= f.submit 'Create Book' %>
+   <%= f.submit 'Create Book', class:"btn btn-success" %>
   </div>
 <% end %>

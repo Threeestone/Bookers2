@@ -1,9 +1,13 @@
 <h2>User info</h2>
 
- <%= form_with model: @book do |t| %>
- <h4>Name</h4>
-  <%= t.text_field :name %>
- <h4>Introduction</h4>
-  <%= t.text_area :body %>
-  <%= t.submit 'Update User' %>
+ <%= form_with model: @user do |t| %>
+  <p>Name</p>
+   <%= t.text_field :name %>
+  <p>Image</p>
+   <%= t.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>
+  <p>Introduction</p>
+   <%= t.text_area :body %>
+ <div class="submit">
+  <%= t.submit 'Update User', class:"btn btn-secondary" %>
+ </div>
   <% end %>

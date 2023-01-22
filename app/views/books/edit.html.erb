@@ -1,17 +1,17 @@
 <h1>Editing Book</h1>
 
-<%= form_with model: @book do |t| %>
+<%= form_with model: @book do |f| %>
 
 <div class='title'>
  <h4>Title</h4>
-  <%= t.text_field :title %>
+  <%= f.text_field :title %>
 </div>
 <div class="body">
  <h4>Body</h4>
-  <%= t.text_area :body %>
+  <%= f.text_area :body %>
 </div>
 <div class="submit">
-  <%= t.submit 'Update Book' %>
+  <%= f.submit 'Update Book' %>
 </div>
 <% end %>
 

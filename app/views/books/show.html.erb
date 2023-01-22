@@ -8,8 +8,10 @@
      <td><%= @book.user.name %></td>
      <td><%= @book.title %></td>
      <td><%= @book.body %></td>
+    <% if @book.user == current_user %>
      <td><%= link_to "Edit", edit_book_path(@book.id), class:"btn btn-sm btn-success edit_book_57269" %></td>
      <td><%= link_to "Destroy", "/books/#{@book.id}", method: :delete, class:"btn btn-sm btn-danger destroy_book_57269" %></td>
+    <% end %>
     </tr>
   </tbody>
  </table>

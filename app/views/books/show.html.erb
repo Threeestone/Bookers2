@@ -2,6 +2,7 @@
  <%= flash[:notice] %>
 </div>
 
+<%= render 'books/list', book: @book_new, user: @user %>
 
 
 <h2>Book detail</h2>
@@ -9,9 +10,10 @@
   <tbody>
     <tr>
      <td><%= link_to user_path(@book.user_id) do %>
-     <%= image_tag @book.user.get_profile_image(100,100) %></td>
+     <%= image_tag @book.user.get_profile_image(100,100) %>
+     <br><%= @book.user.name %></td>
      <% end %>
-     <td><%= @book.user.name %></td>
+
      <td><%= @book.title %></td>
      <td><%= @book.body %></td>
     <% if @book.user == current_user %>

@@ -1,8 +1,11 @@
+<div>
+ <%= flash[:notice] %>
+</div>
 
 <%= render 'books/list', books: @books, book: @book, user: @user %>
 
 <h2>Books</h2>
- <table>
+ <table class="table">
   <thead>
    <tr>
      <th></th>

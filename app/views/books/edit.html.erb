@@ -1,5 +1,14 @@
 <h1>Editing Book</h1>
 
+ <% if @book.errors.any? %>
+  <%= @book.errors.count %>:error
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+ <% end %>
+
 <%= form_with model: @book do |f| %>
 
 <div class='title'>
@@ -20,3 +29,12 @@
  |
  <%= link_to "Back", books_path %>
 </div>
+
+<%if @book.errors.any? %>
+  <%= @book.errors.count %> Title cannot be blank.
+   <ul>
+    <%@book.errors.full_messages.each do |message| %>
+     <li><%= message %></li>
+    <% end %>
+   </ul>
+  <% end %>
